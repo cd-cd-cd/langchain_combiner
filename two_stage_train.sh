@@ -1,0 +1,13 @@
+# CUDA_VISIBLE_DEVICES=2 \
+python two_stage_train.py \
+   --json-path "/amax/home/chendian/WEI_project/Multimodal_Annotated_Dataset/929/test_data.json" \
+   --img-path "/amax/home/chendian/WEI_project/Multimodal_Annotated_Dataset/929/10.12_distribution_after_mod" \
+   --clip-ckpt "/amax/home/chendian/WEI_project/MM-main/experiments/all_dataset_train/lr_5e-5_bs_8_epochs_100_contex_100/checkpoints/epoch_latest.pt" \
+   --vision-model ViT-B-16 \
+   --text-model RoBERTa-wwm-ext-base-chinese \
+   --lr 1e-5 \
+   --batch-size 32 \
+   --epochs 100 \
+   --model Combiner \
+   --projection-dim 512 \
+   --hidden-dim 1024 \
